@@ -1,6 +1,7 @@
 const weatherForm = document.querySelector("form");
 const weatherInput = document.querySelector("input");
 const para = document.querySelector(".weatherData");
+const img = document.querySelector(".img");
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const location = weatherInput.value;
@@ -9,6 +10,9 @@ weatherForm.addEventListener("submit", (e) => {
     const weatherData = fetch(`/weather?address=${location}`)
       .then((res) => res.json())
       .then((data) => {
+        img.style.display = "block";
+        img.style.margin = "auto";
+        img.src = `${data.response.img}`;
         para.textContent = `${data.response.forecast}`;
       })
       .catch((err) => {

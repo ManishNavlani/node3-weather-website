@@ -23,6 +23,7 @@ const forecast = (location, callback) => {
         location: name,
         temperature: temperature,
         forecast: `The Temperature of ${name} is ${temperature} celsius degree, but outside it feels like ${feelslike}`,
+        img: data.current.weather_icons[0],
       });
     })
     .catch((error) => {
@@ -34,4 +35,11 @@ const forecast = (location, callback) => {
     });
 };
 
+forecast("austria", (err, response) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(response);
+  }
+});
 module.exports = forecast;

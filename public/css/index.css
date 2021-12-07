@@ -71,3 +71,8 @@ input {
   border: 1px solid #cccccc;
   padding: 8px;
 }
+
+.img {
+  width: 100px;
+  display: none;
+}
