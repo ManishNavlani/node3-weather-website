@@ -6,9 +6,7 @@ weatherForm.addEventListener("submit", (e) => {
   const location = weatherInput.value;
 
   const weatherApi = (location = "Mumbai") => {
-    const weatherData = fetch(
-      `http://localhost:3000/weather?address=${location}`
-    )
+    const weatherData = fetch(`/weather?address=${location}`)
       .then((res) => res.json())
       .then((data) => {
         para.textContent = `${data.response.forecast}`;
