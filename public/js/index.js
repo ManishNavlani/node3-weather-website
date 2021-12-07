@@ -1,7 +1,6 @@
 const weatherForm = document.querySelector("form");
 const weatherInput = document.querySelector("input");
 const para = document.querySelector(".weatherData");
-// const paraErr = document.querySelector(".weatherError");
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const location = weatherInput.value;
