@@ -29,11 +29,11 @@ app.get("", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About Page",
-    name: "Devidas Navlani",
+    name: "Manish Navlani",
   });
 });
 app.get("/help", (req, res) => {
-  res.render("help", { title: "Help", name: "Hema Navlani" });
+  res.render("help", { title: "Help", name: "Manish Navlani" });
 });
 
 app.get("/weather", (req, res) => {
